@@ -1,5 +1,5 @@
 # 环境配置方面有一点点小bug，需要调一下；
-# 初步发现的需要隔离环境的是sra-tools（可能是依赖包问题，不太清楚），我用的服务器不隔离会下载旧版本。
+# 初步发现的需要隔离环境的是sra-tools，我用的服务器不隔离会下载旧版本。
 
 set -e 
 set -o pipefail 
@@ -239,4 +239,5 @@ gatk --java-options "-Xmx${MEM_GB}G" ApplyVQSR \
     --create-output-variant-index true \
     -mode SNP
 echo "done"
+
 VQSRana
